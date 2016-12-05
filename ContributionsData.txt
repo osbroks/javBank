@@ -1,0 +1,5 @@
+ID,name,annual_interest,contribution_adder
+13256,sdgzdg,1.0,true
+878697,sdghdx,1.0,true
+335345,qwe,1.0,true
+63591,trew,4.0,false
