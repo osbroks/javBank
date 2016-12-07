@@ -22,6 +22,7 @@
 
 import java.io.*;
 import java.util.*;
+
 public class Banking {
     public static void main(String[] args) throws Exception {
 
@@ -40,7 +41,7 @@ public class Banking {
 
         switch (choise) {
             case 1: {
-                System.out.print("Добавить\n 1 - вклад\n 2 - Вкладчика :");
+                System.out.print("Добавить\n 1 - Вклад\n 2 - Вкладчика :");
                 if ((choise = scanner.nextInt()) == 1){
                     System.out.print("\nВведите имя счета: ");
                     String name = scanner.next();
@@ -75,22 +76,23 @@ public class Banking {
                 }
             }
             case 2: {
-
+                System.out.print("Удалить\n 1 - Вклад\n 2 - Вкладчика :");
             }
             case 3: {
-
+                System.out.print("Пополнение счета, если это возможно, по имени вкладчика и номеру счета");
             }
             case 4: {
-
+                System.out.print("Cнятие процентов с вклада;");
             }
             case 5: {
-
+                System.out.print("Закрытие счета с выплатой процентов;");
             }
             case 6: {
-
+                System.out.print("вывод на экран списка вкладчиков, отсортированных по фамилии;");
+                filer.sortBySurname(contributerFile);
             }
             case 7: {
-
+                System.out.print("вывод на экран списка вкладчиков по заданному диапазону размера вклада");
             }
         }
     }

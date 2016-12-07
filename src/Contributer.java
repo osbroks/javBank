@@ -1,11 +1,18 @@
 import java.io.*;
 import java.util.*;
 import java.text.*;
+
 public class Contributer {
     private int ID, kindOfContribution;
     private String name, second_name, father_name;
     private String date;
     private float summ;
+    
+    private Contribution contribution;
+    
+    public int get(){
+        return contribution.getNumber();
+    }
 
     public List<String> getList(String file_name) throws Exception{
         List<String> list = new ArrayList<>();

@@ -8,14 +8,32 @@ public class Filer {
 
     public void addString(String fileName, String string) throws Exception {
         File file = new File(fileName);
-        FileWriter fw = new FileWriter(file, true);
-        fw.write(string);
-        fw.close();
+        try (FileWriter fw = new FileWriter(file, true)) {
+            fw.write(string);
+        }
     }
 
-    public void getMssStr(String fileName) {
-
+    public void sortBySurname(String fileName) throws Exception{
+        File file = new File(fileName);
+        Scanner scanner = new Scanner(file);
+        List<String> list = new ArrayList<>();
+        
+        String str;
+        while((str = scanner.nextLine()) != null){
+            int i = 0;
+            list.add(i,str);
+            i++;
+        }
+        
+        Collections.sort(list);
+        
+        
+        String[] string;
+        String tmpString;
+        for(int i = 0; i < list.size(); i++){
+            tmpString = list.get(i);
+            string = tmpString.split(",");
+            
+        }
     }
-
-
 }

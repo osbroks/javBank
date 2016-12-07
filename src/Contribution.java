@@ -7,6 +7,14 @@ public class Contribution {
     private float percent = 0, summ = 0;
     private boolean adder = false;
 
+    
+    Contribution(){
+        this.ID = (int)(Math.random())*10000;
+    }
+    
+    public int getNumber(){
+        return ID;
+    }
 
     public List<String> getList(String fileName) throws Exception{
         List<String> list = new ArrayList<>();
